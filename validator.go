@@ -81,11 +81,11 @@ func IsMoney2Point(s string,regex ...string) bool {
 
 func IsAllNilString(s ...string) bool {
 	for _, v := range s {
-		if len(v) > 1 {
-			return false
+		if len(v) < 1 {
+			return true
 		}
 	}
-	return true
+	return false
 }
 
 func IsPassword(pwd string,regex ...string) bool {
